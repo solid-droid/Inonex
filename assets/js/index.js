@@ -1,42 +1,9 @@
-'use strict';
-
-var currTab = $('.active-tab');
-
-if (currTab) {
-  var currTabName = currTab.data('tab');
-  var tabElem = $('#' + currTabName);
-  showContent(tabElem);
-}
-
-$('.image-tab').on('click', function (e) {
-  e.preventDefault();
-  var currentTab = $(this).data('tab');
-  var contentArea = $('#' + currentTab);
-  hideTab();
-  $(this).addClass('active-tab');
-  showContent(contentArea);
-});
-
-function showContent(tabContent) {
-  tabContent.show();
-}
-function hideTab(hideAll) {
-  //tab.hide();
-  hideAll = true;
-  if (hideAll) {
-    $('.image-tab').removeClass('active-tab');
-    var contentArea = $('.content-area');
-    $.each(contentArea, function (index, elem) {
-      $(elem).hide();
-    });
-  }
-  //hide them all
-}
+/* ---- particles.js config ---- */
 
 particlesJS("aa_particles", {
   "particles": {
     "number": {
-      "value": 50,
+      "value": 40,
       "density": {
         "enable": true,
         "value_area": 800
