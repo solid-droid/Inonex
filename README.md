@@ -1,2 +1,2 @@
-# inonex
+# Inonex
 Website source code
